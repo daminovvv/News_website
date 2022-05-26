@@ -1,0 +1,22 @@
+#header,
+.module h2, .module caption, .inline-group h2 {
+    background: linear-gradient(to right, red, orange, yellow, green, cyan, blue, violet);
+  -webkit-background-clip: transparent;
+    color: #fff;
+}
+#branding h1, #branding h1 a:link, #branding h1 a:visited{
+    color: #424242;
+    font-weight: bold;
+}
+#content{
+    background: repeating-linear-gradient(
+  45deg,
+  #606dbc,
+  #606dbc 10px,
+  #465298 10px,
+  #465298 20px
+);
+}
+div.breadcrumbs {
+    background: #e91e63
+}
