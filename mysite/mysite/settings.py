@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'debug_toolbar',
     'news.apps.NewsConfig',
+    'multileveltree.apps.MultileveltreeConfig',
 ]
 
 MIDDLEWARE = [

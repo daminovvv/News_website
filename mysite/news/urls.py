@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import *  # * = import all, точка значит что из этой же директории
+from .views import *
 
 urlpatterns = [
     # path('', index, name='home'),
