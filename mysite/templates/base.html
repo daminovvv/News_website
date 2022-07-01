@@ -23,13 +23,28 @@
       {% block sidebar %} Sidebar{% endblock sidebar %}
     </div>
     <div class="col-md-9">
+      {% if messages %}
+      <ul class="messages">
+        {% for message in messages %}
+        {% if message.tags == 'error' %}
+          <div class="alert alert-danger" role="alert">
+            {{ message }}
+          </div>
+        {% else %}
+          <div class="alert alert-{{ message.tags }}" role="alert">
+            {{ message }}
+          </div>
+        {% endif %}
+        {% endfor %}
+      </ul>
+      {% endif %}
       {% block content %} Content {% endblock content %}
 
       <nav aria-label="...">
         <ul class="pagination">
 
           {% if page_obj.has_previous %}
-            <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}">Previous</a></li>
+            <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}">Previous</a></li>
           {% endif %}
 
           {% for p in page_obj.paginator.page_range %}

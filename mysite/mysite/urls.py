@@ -7,7 +7,10 @@ from news.views import *   # импортирует все, import all
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # path('ckeditor/', include('ckeditor_uploader.urls')),
+    # path('captcha/', include('captcha.urls')),
     path('', include('news.urls')),
+    # path('test/', include('multileveltree.urls'))
 ]
 
 # На этапе разработки необходимо место для загрузки файлов/картинок
